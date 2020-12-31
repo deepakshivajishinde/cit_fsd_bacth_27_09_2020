@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .block {
+        width: 400px;
+        border: 2px solid;
+        height: 100px;
+        position: relative;
+      }
+      .bg-violet {
+        background-color: violet;
+      }
+
+      .bg-green {
+        background-color: green;
+      }
+      .bg-red {
+        background-color: red;
+      }
+
+      .div {
+        top: 250px;
+        left: 200px;
+        z-index: 2;
+      }
+
+      .div-1 {
+        z-index: 2;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="block bg-violet div-1"></div>
+    <div class="block bg-green div"></div>
+    <div class="block bg-red"></div>
+  </body>
+</html>

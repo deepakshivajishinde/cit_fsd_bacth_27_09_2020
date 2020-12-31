@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .parent {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        /* border-radius: 100%; */
+        margin-top: 30vh;
+        /* animation-name: moveBlock;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+        animation-direction: alternate;
+        animation-delay: 0s;
+        animation-timing-function: ease-in-out;*/
+
+        animation: moveBlock 2s 0s both 1 alternate ease-in-out,
+          rotateBlock 3s 2s forwards ease-in-out;
+      }
+
+      @keyframes moveBlock {
+        0% {
+          transform: translate(0vh, 0vh);
+        }
+        /*50% {
+          background-color: violet;
+          transform: translate(35vh, 0vh);
+          border-radius: 10%;
+        }*/
+        100% {
+          transform: translate(70vh, 0vh);
+          background-color: red;
+        }
+      }
+
+      @keyframes rotateBlock {
+        0% {
+          transform: translate(70vh) rotate(0deg);
+          transform-origin: left bottom;
+        }
+
+        25% {
+          transform: translate(70vh) rotate(180deg);
+          transform-origin: left bottom;
+        }
+
+        40% {
+          transform: translate(70vh) rotate(90deg);
+          transform-origin: left bottom;
+        }
+
+        60% {
+          transform: translate(70vh) rotate(150deg);
+          transform-origin: left bottom;
+        }
+
+        75% {
+          transform: translate(70vh) rotate(110deg);
+          transform-origin: left bottom;
+        }
+
+        100% {
+          transform: translate(70vh) rotate(130deg);
+          transform-origin: left bottom;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent"></div>
+  </body>
+</html>

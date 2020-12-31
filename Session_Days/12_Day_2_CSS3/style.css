@@ -1,0 +1,17 @@
+span,
+i,
+strong {
+  color: pink;
+  background-color: black;
+}
+h1 {
+  color: green;
+}
+.text-tomato {
+  color: tomato;
+}
+
+.text-tomato {
+  color: red;
+  background-color: yellow;
+}

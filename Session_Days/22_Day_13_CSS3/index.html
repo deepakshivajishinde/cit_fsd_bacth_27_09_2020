@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        height: 200vh;
+      }
+      .set-space {
+        height: 100vh;
+        width: 100%;
+        border: 1px solid;
+        /* margin: 10px auto; */
+      }
+      .container-1 {
+        /* background-color: rgb(238, 180, 180); */
+        background-image: url("img/img.jpg");
+        /* background-size: 100%; */
+        /* background-size: 100px 100px; */
+        background-size: cover;
+        /* background-size: 100px; */
+        background-repeat: no-repeat;
+        /* background-position: right; */
+        /* background-position: 10% 100%; */
+        /* background-position: 30px 50px; */
+        background-attachment: fixed;
+      }
+      .container-2 {
+        background-color: green;
+        background-image: url("img/bg.jpg");
+        background-size: cover;
+        background-attachment: fixed;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-1 set-space">
+      <center>
+        <h1>HTML</h1>
+      </center>
+    </div>
+    <div class="container-2 set-space">
+      <center>
+        <h1>CSS</h1>
+      </center>
+    </div>
+  </body>
+</html>

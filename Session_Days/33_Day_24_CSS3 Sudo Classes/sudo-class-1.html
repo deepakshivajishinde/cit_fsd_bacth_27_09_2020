@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        box-sizing: border-box;
+      }
+      a {
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+        text-decoration-style: dotted;
+        background-color: yellow;
+      }
+      a:link {
+        color: green;
+      }
+      a:active {
+        color: tomato;
+        font-style: italic;
+      }
+      a:visited {
+        color: teal;
+        font-style: italic;
+      }
+      button:active {
+        background-color: rgb(245, 14, 245);
+        color: white;
+        border: 0;
+        outline: 0;
+      }
+      .list {
+        list-style: none;
+      }
+      .list li {
+        border: 1px solid;
+      }
+      /*.list li:first-child,
+      li:last-child {
+        background-color: yellow;
+        font-weight: bold;
+      }*/
+      .list li:nth-child(even) {
+        background-color: yellow;
+      }
+      .list li:nth-child(odd) {
+        background-color: tomato;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <a href="#8">CLICK</a>
+    <button>CLICK</button> -->
+
+    <ul class="list">
+      <li>Home</li>
+      <li>About</li>
+      <li>Contact Us</li>
+      <li>Portfolio</li>
+      <li>Contact Us</li>
+      <li>Portfolio</li>
+    </ul>
+  </body>
+</html>

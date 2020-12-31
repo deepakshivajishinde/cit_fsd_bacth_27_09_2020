@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        box-sizing: border-box;
+      }
+      input {
+        display: block;
+        margin: auto;
+        margin-top: 5vh;
+        outline: 0;
+        padding: 5px;
+      }
+      input:focus {
+        border: 1px solid;
+        border-radius: 10px 0px;
+        background-color: rgb(185, 255, 185);
+      }
+      input:disabled {
+        background-color: hotpink;
+        outline: 0;
+        border: 0;
+        color: white;
+      }
+      input:read-only {
+        border: 1px solid;
+        border-radius: 10px 0px;
+        background-color: rgb(248, 141, 122);
+      }
+      input:valid {
+        background-color: rgb(185, 255, 185);
+      }
+      input:invalid {
+        background-color: rgb(255, 185, 185);
+      }
+    </style>
+  </head>
+  <body>
+    <form action="">
+      <input type="text" value="" required />
+      <!-- <input type="text" value="Deepak" readonly /> -->
+      <!-- <input type="text" value="Deepak" disabled /> -->
+      <input type="email" required />
+      <input type="number" required />
+    </form>
+  </body>
+</html>

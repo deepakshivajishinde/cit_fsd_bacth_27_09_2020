@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .parent {
+        width: 200px;
+        height: 300px;
+        margin: auto;
+        margin-top: 25vh;
+      }
+      .child-1 {
+        width: inherit;
+        height: inherit;
+        transform: perspective(800px);
+        transform-origin: top;
+        transition: transform 2s;
+        background-color: red;
+        position: absolute;
+      }
+      .child-2 {
+        margin: auto;
+        width: inherit;
+        height: inherit;
+        background-color: rgb(78, 74, 74);
+        border: 2px solid;
+        overflow: hidden;
+      }
+      .parent:hover .child-1 {
+        transform: perspective(800px) rotateX(-70deg);
+        transform-origin: top;
+      }
+      .child-2 img {
+        width: inherit;
+        height: inherit;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child-1"></div>
+      <div class="child-2">
+        <img src="img/bg-1.jpg" alt="" />
+      </div>
+    </div>
+  </body>
+</html>

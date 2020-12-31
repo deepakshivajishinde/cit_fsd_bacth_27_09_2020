@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: green;
+      }
+      div {
+        width: 30%;
+        height: 100px;
+        background-color: red;
+        border: 1px solid;
+        display: inline-block;
+      }
+
+      @media screen and (max-width: 600px) {
+        body {
+          background-color: red;
+        }
+        div {
+          width: 100%;
+          background-color: yellowgreen;
+        }
+        .div-3 {
+          display: inline-block;
+        }
+      }
+      @media screen and (max-width: 800px) and (min-width: 600px) {
+        body {
+          background-color: rgb(29, 119, 253);
+        }
+        div {
+          background-color: white;
+          width: 45%;
+        }
+        .div-3 {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+    <div></div>
+    <div class="div-3"></div>
+  </body>
+</html>
