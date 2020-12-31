@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        margin: 10px 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      //add
+      //sub
+      //mult
+      //div
+      var a = 2;
+      var b = 3;
+      function add(a, b) {
+        return new Promise(function (resolve, reject) {
+          a = a + b;
+          resolve(a);
+        });
+      }
+
+      function sub(a, sub_value) {
+        return new Promise(function (resolve, reject) {
+          a = a - sub_value;
+          resolve(a);
+        });
+      }
+
+      function div(a, div_value) {
+        return new Promise(function (resolve, reject) {
+          if (div_value == 0) {
+            reject("Invalid value");
+          } else {
+            a = a / div_value;
+            resolve(a);
+          }
+        });
+      }
+
+      add(a, b)
+        .then(function (result1) {
+          return sub(result1, 1);
+        })
+        .then(function (result2) {
+          return div(result2, 2);
+        })
+        .then(function (result3) {
+          console.log(result3);
+        })
+        .catch(function (error) {
+          console.log("error", error);
+        });
+
+      /*function mult(a, mult_value, callback) {
+        a = a * mult_value;
+        callback(a);
+      }
+
+*/
+      /*add(a, b, function (result1) {
+        sub(result1, 1, function (result2) {
+          mult(result2, 5, function (result3) {
+            div(result3, 2, function (result4) {
+              console.log(result4);
+            });
+          });
+        });
+      });*/
+    </script>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <input type="text" placeholder="Add A Product" id="inputProduct" />
+      <button id="idBtnAddProduct">Add Product</button>
+    </form>
+    <table width="100%" border="1">
+      <caption>
+        Product List
+      </caption>
+      <thead>
+        <tr>
+          <th width="15%">Sr No.</th>
+          <th>Product Name</th>
+        </tr>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+    <script>
+      var inputProduct = document.getElementById("inputProduct");
+      var btnAddProduct = document.getElementById("idBtnAddProduct");
+      var tbody = document.getElementById("tbody");
+      var productList = [];
+      
+      btnAddProduct.addEventListener("click", function (event) {
+        event.preventDefault();
+        var product_name = inputProduct.value;
+        inputProduct.value = "";
+        productList.push(product_name);
+        printTable();
+      });
+
+      function printTable() {
+        var pCount = productList.length;
+        var _tr = "";
+        if (pCount == 0) {
+          _tr += "<tr><th colspan=" + 2 + "> No List Available</th></tr>";
+        } else {
+          for (var index = 0; index < pCount; index++) {
+            var srNo = index + 1;
+            var pName = productList[index];
+            _tr += "<tr><td>" + srNo + "</td><td>" + pName + "</td></tr>";
+          }
+        }
+
+        tbody.innerHTML = _tr;
+      }
+      printTable();
+    </script>
+  </body>
+</html>

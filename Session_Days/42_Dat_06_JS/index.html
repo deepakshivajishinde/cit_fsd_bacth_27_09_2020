@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <input type="text" value="Kiran" />
+    <input type="text" value="Hritik" />
+    <div><input type="text" value="Akash" /></div> -->
+    <h1 class="changeText">Hello 1</h1>
+    <h1>Hello 2</h1>
+    <h1 id="idText">Hello 3</h1>
+    <p class="changeText">Hello 1</p>
+    <script>
+      //var input = document.getElementsByTagName("input");
+      // var name = input[0].value;
+      // input[0].value = "Deepak";
+      // console.log(input[0].getAttribute("value"));
+      // console.log(input[0].value);
+      //var h1 = document.getElementsByTagName("h1");
+      var changeText = document.getElementsByClassName("changeText");
+      for (const key in changeText) {
+        changeText[key].innerHTML = "JS";
+      }
+      var idText = document.getElementById("idText");
+      idText.innerHTML = "Akash";
+    </script>
+  </body>
+</html>

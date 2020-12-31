@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul id="studentList"></ul>
+    <script>
+      var ulList = document.getElementById("studentList");
+      const array1 = [10, "a", 4.5, 4, "a", 0.5];
+      const array2 = [4, "e", 5, 2, "z", 5.14];
+      var combine = [...array1, ...array2];
+
+      var output = combine
+        .filter(function (value) {
+          return !isNaN(value);
+        })
+        .map(function (value) {
+          return "<li>" + (value * value).toFixed(2) + "</li>";
+        });
+
+      ulList.innerHTML = output.join("");
+      console.log(output);
+    </script>
+  </body>
+</html>

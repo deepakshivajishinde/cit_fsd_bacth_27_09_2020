@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <button id="btnClick">CLICK</button>
+    </form>
+    <script>
+      var btn = document.getElementById("btnClick");
+      btn.addEventListener("click", function (event) {
+        event.preventDefault();
+        console.log(this);
+      });
+      btn.addEventListener("dblclick", function (event) {
+        event.preventDefault();
+        console.log("Hello");
+      });
+    </script>
+  </body>
+</html>

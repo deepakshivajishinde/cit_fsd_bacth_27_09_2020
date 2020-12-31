@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button ondblclick="myClickEvent(this,event)">CLICK</button>
+    <input type="text" onkeyup="myKeyPressEvent(this,event)" />
+    <script>
+      var btn = document.getElementsByTagName("button")[0];
+      function myClickEvent(_this, event) {
+        event.preventDefault();
+        console.log(event);
+      }
+
+      function myKeyPressEvent(_this, event) {
+        var value = Number(_this.value);
+        if (isNaN(value)) {
+          _this.value = 0;
+        }
+        if (value > 100) {
+          _this.value = 100;
+        }
+      }
+    </script>
+  </body>
+</html>

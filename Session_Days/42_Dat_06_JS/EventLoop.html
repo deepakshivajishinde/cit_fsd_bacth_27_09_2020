@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var a = 2;
+      function functionA() {
+        /* for (let index = 0; index < 5000; index++) {
+          console.log("index");
+        }*/
+        console.log("Hello");
+      }
+      console.log(a);
+      setTimeout(function () {
+        console.log("Time is out 3S");
+      }, 3000);
+      setTimeout(function () {
+        console.log("Time is out 5S");
+      }, 5000);
+      setTimeout(function () {
+        console.log("Time is out 1S");
+      }, 1000);
+      var count = 0;
+      setInterval(function () {
+        count += 1;
+        console.log(count);
+      }, 1000);
+      functionA();
+      console.log(a);
+    </script>
+  </body>
+</html>

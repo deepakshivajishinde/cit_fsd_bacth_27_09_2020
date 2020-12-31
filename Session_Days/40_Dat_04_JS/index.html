@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // common function
+      function functionA() {
+        console.log("Hello");
+      }
+      //functionA();
+      // Anonymous
+      var functionB = function () {
+        console.log("Hello B");
+      };
+      //functionB();
+      //inline function
+      var a = 2;
+      var b = 3;
+      const pie = 3.14;
+
+      var addFunction = function (a, b, callback) {
+        var add = a + b;
+        callback(add);
+      };
+
+      addFunction(a, b, function (addView) {
+        var mult = addView - pie;
+        console.log(mult);
+      });
+      /* var subFunction = function (addView) {
+        var sub = addView - pie;
+        console.log(sub);
+        //return sub;
+      };*/
+
+      // var divFunction = function (addView) {
+      //   var div = addView / pie;
+      //   console.log(div);
+      //   //return sub;
+      // };
+
+      // addFunction(a, b, divFunction);
+      // addResult - pie
+      // addResult x pie
+      // addResult / pie
+
+      // console.log(addResult);
+    </script>
+  </body>
+</html>

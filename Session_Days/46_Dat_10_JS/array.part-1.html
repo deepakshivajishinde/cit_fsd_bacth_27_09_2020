@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //const array = [100, "a", 4.5, 74, "a", 0.5];
+      //var index = array.indexOf("a");
+      //var index = array.lastIndexOf("a");
+      //var index = array.includes("a");
+
+      const array = [
+        {
+          id: 1,
+          name: "Hritik",
+        },
+        {
+          id: 2,
+          name: "Arun",
+        },
+        {
+          id: 3,
+          name: "Deepak",
+        },
+        {
+          id: 4,
+          name: "Krian",
+        },
+      ];
+      var search = "Hritik"; //key i.e index
+      //es5
+      /*var find1 = array.find(function (element) {
+        return element.name == search;
+      });*/
+      //es6 arrow
+      /*var find = array.find((element) => element.name == search);*/
+
+      /*var output = find;
+      console.log(output);*/
+
+      // Iteration of array
+
+      /*for (let key in array) {
+        console.log(array[key]);
+      }
+       for (let value of array) {
+        console.log(value);
+      }
+      array.forEach(function (value, key) {
+        console.log(value);
+      });*/
+    </script>
+  </body>
+</html>

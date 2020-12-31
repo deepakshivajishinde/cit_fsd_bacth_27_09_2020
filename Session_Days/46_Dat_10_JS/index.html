@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const array1 = [100, "a", 4.5, 74, "a", 0.5];
+      const array2 = [451, "e", 4145, 742, "z", 75.14];
+      const array3 = [58, 70, "m", "s", "a", 88.88];
+      var combine1 = array1.concat(array2, array3);
+      var combine = [...array1, ...array2, ...array3];
+
+      var slice = combine.slice(5, 11);
+      var output = slice;
+      console.log(output);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        margin: 10px 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="">
+      <fieldset>
+        <legend>Student Registration</legend>
+        <div>
+          <label for="">Full Name</label>
+          <input type="text" id="userName" />
+        </div>
+        <div>
+          <label for="">Date Of Birth</label>
+          <input type="date" id="dob" />
+        </div>
+        <div>
+          <label for="">Gender</label>
+          <input type="radio" name="gender" value="male" class="gender" />
+          <label for="">Male</label>
+          <input type="radio" name="gender" value="female" class="gender" />
+          <label for="">Female</label>
+          <input type="radio" name="gender" value="other" class="gender" />
+          <label for="">Other</label>
+        </div>
+        <div>
+          <button id="saveDetails">Save</button>
+          <input type="reset" />
+        </div>
+      </fieldset>
+    </form>
+    <script src="script.js"></script>
+    <script>
+      student.singleStudent.userName = document.getElementById("userName");
+       saveDetails = document.getElementById("saveDetails");
+      var dob = document.getElementById("dob");
+      var gender = document.getElementsByClassName("gender");
+
+      saveDetails.addEventListener("click", function (event) {
+        event.preventDefault();
+        var _gender = "";
+        student.checkGender(gender, function (__gender) {
+          _gender = __gender;
+        });
+        if (_gender == "") {
+          alert("Select A gender");
+        }
+        var newStudent = {
+          name: userName.value,
+          dob: dob.value,
+          gender: _gender,
+        };
+        student.addNewStudent(newStudent, function () {
+          userName.value = "";
+          dob.value = "";
+          student.resetGender(gender);
+        });
+      });
+    </script>
+  </body>
+</html>

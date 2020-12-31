@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul id="studentList"></ul>
+    <script>
+      var ulList = document.getElementById("studentList");
+      var student = [
+        {
+          id: 2,
+          name: "Santosh",
+        },
+        {
+          id: 3,
+          name: "Arun",
+        },
+        {
+          id: 5,
+          name: "Mohit",
+        },
+        {
+          id: 7,
+          name: "Tushar",
+        },
+      ];
+      output = student.map(function (value) {
+        return "<li>Jr. " + value.name + "</li>";
+      });
+
+      ulList.innerHTML = output.join("");
+      console.log(output);
+    </script>
+  </body>
+</html>

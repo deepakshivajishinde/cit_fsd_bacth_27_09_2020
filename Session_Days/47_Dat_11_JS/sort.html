@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*const array1 = [100, "a", 4.5, 74, "a", 0.5];
+      const array2 = [451, "e", 4145, 742, "z", 75.14];
+      const array3 = [58, 70, "m", "s", "a", 88.88];
+      var combine1 = array1.concat(array2, array3);
+      var combine = [...array1, ...array2, ...array3];*/
+      var array1 = [10, 15, 4, 74, 10, 5];
+      var output = array1.sort(function (a, b) {
+        if (a < b) return -1;
+        if (a > b) return 1;
+        return 0;
+      });
+
+      //var array2 = ["Z", "M", "a", "c", "C", "z"];
+      var studentDetails = [
+        {
+          id: 2,
+          name: "Santosh",
+        },
+        {
+          id: 3,
+          name: "Arun",
+        },
+        {
+          id: 5,
+          name: "Mohit",
+        },
+        {
+          id: 7,
+          name: "Tushar",
+        },
+      ];
+      output = studentDetails.sort(function (a, b) {
+        a = a.name.toLowerCase();
+        b = b.name.toLowerCase();
+        if (a > b) return -1;
+        if (a < b) return 1;
+        return 0;
+      });
+
+      console.log(output);
+    </script>
+  </body>
+</html>

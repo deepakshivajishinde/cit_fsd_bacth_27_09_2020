@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        margin: 10px 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      var a = 2;
+      var b = 3;
+      function add(a, b) {
+        return new Promise(function (resolve, reject) {
+          a = a + b;
+          resolve(a);
+        });
+      }
+
+      function sub(a, sub_value) {
+        return new Promise(function (resolve, reject) {
+          a = a - sub_value;
+          resolve(a);
+        });
+      }
+
+      function div(a, div_value) {
+        return new Promise(function (resolve, reject) {
+          if (div_value == 0) {
+            reject("Invalid value");
+          } else {
+            a = a / div_value;
+            resolve(a);
+          }
+        });
+      }
+
+      async function functionA(a, b) {
+        var result1 = await add(a, b);
+        var result2 = await sub(result1, 1);
+        var result3 = await div(result2, 1);
+        return result3;
+      }
+
+      functionA(a, b)
+        .then(function (result) {
+          console.log(result);
+        })
+        .catch(function (error) {
+          console.log("error", error);
+        });
+    </script>
+  </body>
+</html>
