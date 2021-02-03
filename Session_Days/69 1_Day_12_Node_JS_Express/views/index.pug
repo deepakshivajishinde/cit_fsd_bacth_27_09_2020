@@ -1,0 +1,23 @@
+extends layout
+block content
+    div #{stud_list}
+    ul
+        each student in stud_list
+            li #{student.name}
+    table
+        thead
+            tr
+                th Sr No
+                th Name
+                th Marks  
+                th Result
+        tbody
+            each student,index in stud_list
+                tr
+                    td #{index + 1}
+                    td #{student.name}
+                    td #{student.marks}
+                    if(Number(student.marks) > 35)
+                        td Pass
+                    else
+                        td Fail 

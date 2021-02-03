@@ -1,0 +1,36 @@
+doctype html
+html
+    head
+        title User Page
+        link(rel="stylesheet" href="/stylesheets/style.css") 
+    body
+        h1 Hello user #{userInfo.name} #{userInfo.mobile}
+        table
+            thead
+                tr
+                    th Sr.No
+                    th Subject Name
+                    th Marks Gain
+                    th Result
+            tbody
+                each subject,index in userInfo.subject
+                    - var marksGain = `${subject.marks}/${subject.maxMarks}`;
+                    - var rageFoPassing = 40;
+                    tr
+                        td #{index + 1}
+                        td #{subject.name}
+                        td #{marksGain}
+                        if(subject.marks >= rageFoPassing)
+                            - var result = "Passed1";
+                            td#td-id(class="pass" title=result) #{result}
+                        else
+                            td.fail.bold.sample Fail
+        form
+            div
+                label UserName
+                input(type="text" value="" placeholder="Enter Username")
+        script(src="/javascripts/main.js")
+           
+
+         
+
