@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  div
+    form(action="add-new-student" method="post")
+      fieldset
+        legend Student Registration
+        div
+          label(for="") Name
+          input(type="text" name="candidateName" placeholder="Enter Student Name")
+        div
+          label(for="") Class Name
+          select(name="candidateClassName")
+            option(value="11") 11th
+            option(value="12") 12th
+        div
+          button Submit
+    table
+      thead
+        tr
+          th Sr No
+          th Student Name
+      tbody
+        each user,index in users
+          tr
+            td #{index + 1}
+            td #{user.name}
+
+
